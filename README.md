@@ -48,9 +48,10 @@ Você foi contratado para desenvolver a API de backend do sistema TechManage, um
 
 ### Banco de Dados utilizado
 
-**Bando de Dados relacional: Maria DB**
-- Usuário: desafio
-- Senha: desafioibm
+**Bando de Dados relacional: Postgresql**
+- Banco: desafio_ibm
+- Usuário: user_desafio
+- Senha: senha_desafio
 - Script de banco é gerenciado pelo flyway migrations
 
 ### Testes unitários
@@ -75,7 +76,7 @@ Você foi contratado para desenvolver a API de backend do sistema TechManage, um
     cd desafio-ibm
     ```
 3.  **Configure o banco de dados:**
-    -   Crie um banco de dados com o nome `desafio-ibm`.
+    -   Crie um banco de dados com o nome `desafio_ibm`.
 
 
 4.  **Execute a aplicação:**
@@ -83,17 +84,4 @@ Você foi contratado para desenvolver a API de backend do sistema TechManage, um
     
 
 5.  **Acesse a API:**
-    -   A API estará disponível em `http://localhost:8080/api/users`.
-
-## Exemplos de Requisições
-
-### Criar um Usuário (POST /api/users)
-
-```json
-{
-  "fullName": "João da Silva",
-  "email": "[endereço de e-mail removido]",
-  "phone": "+55 11 99999-9999",
-  "birthDate": "1990-01-01",
-  "userType": "ADMIN"
-}
+    -   A API estará disponível em `http://localhost:8080/swagger-ui.html`.

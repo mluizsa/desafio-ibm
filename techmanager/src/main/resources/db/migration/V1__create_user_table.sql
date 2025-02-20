@@ -1,9 +1,18 @@
--- Criando a tabela 'user' se não existir
-CREATE TABLE IF NOT EXISTS user (
-    user_id BIGINT PRIMARY KEY AUTO_INCREMENT COMMENT 'ID único do usuário, gerado automaticamente',
-    user_fullName VARCHAR(255) NOT NULL COMMENT 'Nome completo do usuário',
-    user_email VARCHAR(255) NOT NULL UNIQUE COMMENT 'Endereço de e-mail único e validado',
-    user_phone VARCHAR(20) COMMENT 'Número de telefone no formato internacional (ex.: +55 11 99999-9999)',
-    user_birthDate DATE COMMENT 'Data de nascimento do usuário',
-    user_userType ENUM('ADMIN', 'EDITOR', 'VIEWER') NOT NULL COMMENT 'Tipo de usuário: ADMIN, EDITOR ou VIEWER'
-) COMMENT='Tabela de usuários do sistema';
+CREATE TYPE user_type AS ENUM ('ADMIN', 'EDITOR', 'VIEWER');
+
+CREATE TABLE IF NOT EXISTS usersystem (
+    usersystem_id BIGSERIAL PRIMARY KEY,
+    usersystem_full_name VARCHAR(255) NOT NULL,
+    usersystem_email VARCHAR(255) UNIQUE NOT NULL,
+    usersystem_phone VARCHAR(20),
+    usersystem_birth_date DATE,
+    usersystem_user_type user_type NOT NULL
+);
+
+COMMENT ON TABLE usersystem IS 'Tabela de usuários do sistema';
+COMMENT ON COLUMN usersystem.usersystem_id IS 'ID único do usuário, gerado automaticamente';
+COMMENT ON COLUMN usersystem.usersystem_full_name IS 'Nome completo do usuário';
+COMMENT ON COLUMN usersystem.usersystem_email IS 'Endereço de e-mail único e validado';
+COMMENT ON COLUMN usersystem.usersystem_phone IS 'Número de telefone no formato internacional (ex.: +55 11 99999-9999)';
+COMMENT ON COLUMN usersystem.usersystem_birth_date IS 'Data de nascimento do usuário';
+COMMENT ON COLUMN usersystem.usersystem_user_type IS 'Tipo de usuário: ADMIN, EDITOR ou VIEWER';

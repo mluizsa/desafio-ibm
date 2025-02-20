@@ -71,8 +71,8 @@ Você foi contratado para desenvolver a API de backend do sistema TechManage, um
 
 2.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/dolthub/dolt](https://github.com/dolthub/dolt)
-    cd [nome do repositório]
+    git clone [https://github.com/mluizsa/desafio-ibm.git](https://github.com/mluizsa/desafio-ibm.git)
+    cd desafio-ibm
     ```
 3.  **Configure o banco de dados:**
     -   Crie um banco de dados com o nome `desafio-ibm`.

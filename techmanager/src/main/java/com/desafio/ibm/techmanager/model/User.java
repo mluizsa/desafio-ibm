@@ -1,8 +1,7 @@
 package com.desafio.ibm.techmanager.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -10,6 +9,9 @@ import java.time.LocalDate;
 @Table(name = "usersystem")
 @Setter
 @Getter
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
 public class User {
 
     @Id

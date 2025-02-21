@@ -2,6 +2,8 @@ package com.desafio.ibm.techmanager.dto;
 
 
 import com.desafio.ibm.techmanager.model.User;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +11,8 @@ import java.time.LocalDate;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@Builder
 public class UserResponseDTO {
     private String fullName;
     private String email;
@@ -17,13 +21,13 @@ public class UserResponseDTO {
     private String userType;
 
     public User build() {
-        User user = new User();
-        user.setFullName(this.getFullName());
-        user.setEmail(this.getEmail());
-        user.setPhone(this.getPhone());
-        user.setBirthDate(this.getBirthDate());
-        user.setUserType(this.getUserType());
-        return user;
+        return User.builder()
+                .fullName(this.getFullName())
+                .email(this.getEmail())
+                .phone(this.getPhone())
+                .birthDate(this.getBirthDate())
+                .userType(this.getUserType())
+                .build();
     }
 
     public UserResponseDTO(User user) {

@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +14,8 @@ import java.time.LocalDate;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@Builder
 public class UserDTO {
     @NotBlank(message = "Nome completo é obrigatório")
     @Size(min = 3, max = 255, message = "Nome completo deve ter ter entre 3 e 255 caracteres")
@@ -26,13 +30,13 @@ public class UserDTO {
     private String userType;
 
     public User build() {
-        User user = new User();
-        user.setFullName(this.getFullName());
-        user.setEmail(this.getEmail());
-        user.setPhone(this.getPhone());
-        user.setBirthDate(this.getBirthDate());
-        user.setUserType(this.getUserType());
-        return user;
+        return User.builder()
+                .fullName(this.getFullName())
+                .email(this.getEmail())
+                .phone(this.getPhone())
+                .birthDate(this.getBirthDate())
+                .userType(this.getUserType())
+                .build();
     }
 
     public void UserDTO(User user) {

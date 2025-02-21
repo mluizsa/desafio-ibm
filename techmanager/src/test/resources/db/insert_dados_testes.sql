@@ -1,0 +1,10 @@
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 1', 'teste1@email.com', '123456789', 'ADMIN');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 2', 'teste2@email.com', '987654321', 'EDITOR');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 3', 'teste3@email.com', '111111111', 'VIEWER');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 4', 'teste4@email.com', '222222222', 'EDITOR');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 5', 'teste5@email.com', '555555555', 'ADMIN');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 6', 'teste6@email.com', '666666666', 'EDITOR');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 7', 'teste7@email.com', '777777777', 'VIEWER');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 8', 'teste8@email.com', '888888888', 'EDITOR');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 9', 'teste9@email.com', '999999999', 'ADMIN');
+INSERT INTO usersystem (usersystem_full_name, usersystem_email, usersystem_phone, usersystem_user_type) VALUES ('Teste 10', 'teste10@email.com', '101010101', 'EDITOR');

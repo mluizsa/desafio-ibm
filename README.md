@@ -61,7 +61,9 @@ Você foi contratado para desenvolver a API de backend do sistema TechManage, um
 
 
     -- **Biblioteca de Testes:**
-        -   Descrever
+        - Utilizado banco de integração
+        - Ferramentas:
+            - mockito/junit5
 
 ## Como Executar o Projeto Localmente
 
@@ -77,11 +79,37 @@ Você foi contratado para desenvolver a API de backend do sistema TechManage, um
     ```
 3.  **Configure o banco de dados:**
     -   Crie um banco de dados com o nome `desafio_ibm`.
-
+    -   Crie um banco de dados com o nome `desafio_ibm_integracao`.
 
 4.  **Execute a aplicação:**
     -   Com Maven: `mvn spring-boot:run`
     
 
 5.  **Acesse a API:**
-    -   A API estará disponível em `http://localhost:8080/swagger-ui.html`.
+    -   A API estará disponível em `http://localhost:8080/`.
+    -   Utilizei insominia durante o processo de desenvolvimento
+    **links**
+      - GET: http://localhost:8080/api/users/search (param="param")
+      - GET: http://localhost:8080/api/users/{id}
+      - GET: http://localhost:8080/api/users
+      - POST: http://localhost:8080/api/users 
+         ```bash{
+        
+          "fullName": "string",
+          "email": "string",
+          "phone": "string",
+          "birthDate": "yyyy-mm-dd",
+          "userType": "string"
+          }
+        ````
+      - PUT: http://localhost:8080/api/users/{id}
+        ```bash{
+        
+        "fullName": "string",
+        "email": "string",
+        "phone": "string",
+        "birthDate": "yyyy-mm-dd",
+        "userType": "string"
+        }
+        ````
+      - DELETE: http://localhost:8080/api/users/{id}

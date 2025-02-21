@@ -1,0 +1,1 @@
+ALTER TABLE usersystem ALTER COLUMN usersystem_user_type TYPE VARCHAR(100);
